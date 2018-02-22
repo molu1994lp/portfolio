@@ -500,6 +500,12 @@
 		document.getElementById('left').style.height = (document.getElementById('right').clientHeight) +'px';
 	});
 	
+	(function makeSameWidth(){
+		let widthMain = document.querySelector('#right').scrollWidth;
+		const navbar = document.querySelector('.navi-mobile');
+		navbar.style.width = widthMain + 'px';
+		
+	})();
 	
 	</script>
 	<script th:src="@{/scripts/percentageCircle.js}"></script>

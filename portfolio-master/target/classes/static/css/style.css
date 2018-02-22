@@ -150,7 +150,7 @@ canvas:hover{
 }
 .linked{
 	color: white;
-	cursor: pointer;
+	cursor: pointner;
 }
  
 /* ################################ */
@@ -185,9 +185,6 @@ canvas:hover{
 		flex-direction: column;
 		background-color: #7D2741;
 		color: white;
-	}
-	.nav-row{
-
 	}
 	.menu-list li{
 		padding: 10px 20px !important; 
