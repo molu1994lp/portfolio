@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta  charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" rel="stylesheet" />
+	<link href="/css/style.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<script th:src="@{/scripts/fontawesome-all.js}"></script>
+	<script th:src="@{/scripts/ElementQueries.js}"></script> 
+	<script th:src="@{/scripts/ResizeSensor.js}"></script> 
+	<title>Strona Główna</title>
+</head>
+<body lang="pl">
+
+		<div class="row navi-mobile">
+			<div class="col s12 menu-list">
+				<ul class="navi-mobile-list clicked-menu">
+					<li onclick="menuToggle()"><i class="fas fa-bars fa-lg"></i></li>
+					<li><a href="#card1">O mnie</a></li>
+					<li><a href="#card2">Doświadczenie</a></li>
+					<li><a href="#card3">Umiejętności</a></li>
+					<li><a href="#card4">Edukacja</a></li>
+					<li><a href="#card5">Praca dodatkowa</a></li>
+					<li><a href="#card6">Zainteresowania</a></li>
+					<li><a href="#gallery">Portfolio</a></li>
+					<li><a href="#form">Kontakt</a></li>
+				</ul>
+			</div>
+		</div>
+
+	<div class="row myContent">
+			<div class="col m12 l3 colored-left" id="left">
+				<div class="row center-align">
+					<div class="col s12 wrapper">
+						<img src="Images/piotrek.png" class="img" />
+					</div>
+				</div>
+				<div class="row wrapper">
+					<div class="col s12">
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="1" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect waves-light">O mnie</button>
+							</div>
+							<div class="col s12 center-align">
+								<button type="button" value="2" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect">Doświadczenie</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="3" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect">Umiejętności</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="4" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect">Edukacja</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="5" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect">Praca dodatkowa</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="6" onclick="Materialize.fadeInImage(changeCard(event))" class="btn waves-effect">Zainteresowania</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row wrapper">
+					<div class="col s12">
+						<div class="row">
+							<div class="col s12 center-align">
+								<button type="button" value="7" onclick="Materialize.fadeInImage(changeCard(event))" class="btn btn-2 waves-effect ">Portfolio</button>
+							</div>
+							<div class="col s12 center-align">
+								<button type="button" value="8" onclick="Materialize.fadeInImage(changeCard(event))" class="btn btn-2 waves-effect">Kontakt</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		<div class="col m12 l9 rigth" id="right">
+			<div class="row " id="cardsArea">
+
+				<div class="col  s12 activated" id="card1">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Piotr Mol</h2></span><hr></hr>
+							<p style="font-size:1.2rem">Jestem dwudziestotrzyletnim absolwentem Politechniki Śląskiej interesującym się programowaniem.
+							 Swoją przyszłość chciałbym związać z branżą IT dlatego poszukuję możliwości odbycia stażu, 
+							 który pozwolił by mi na zdobycie cennego doświadczenia oraz rozwinięcie moich umiejętności.</p>
+						</div>
+						<div class="card-action right-align">
+							<button class="btn btn-2 waves-effect" type="button" value="8" onclick="Materialize.fadeInImage(changeCard(event))">Kontakt</button> 
+						</div>
+					</div>
+				</div>
+
+				<div class="col  s12  hidden" id="card2">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Doświadczenie: </h2></span><hr></hr>
+							<div class="row">
+								<div class="col s9"><h5>PRAKTYKANT W O&amp;S COMPUTER SOFT</h5></div>
+								<div class="col s3 right-align"><h5>12.2017 - 01.2018</h5></div>
+							</div>
+							<ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<div class="collapsible-header">
+										<i class="material-icons prefix bounce">keyboard_arrow_down</i><p>Pomoc przy modyfikacji aplikacji banku gospodarki krajowej</p>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Wprowadzanie poprawek wizualnych – poprawa błędów w kodzie CSS i JavaScript.</span></div>
+										</div> 
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Testy manualne i poprawa błędów w działaniu aplikacji.</span></div>
+										</div>
+									</div>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</div>
+
+				<div class="col  s12  hidden" id="card3">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Umiejętności: </h2></span>
+							<ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<div class="collapsible-header" onclick="drawCircles()">
+										<i class="material-icons prefix bounce">keyboard_arrow_down</i><p style="font-size:1.2rem">Znajomość języków programowania i narzędzi:</p>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										 <div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>HTML</span></div>
+											<div class="col s4">
+												<canvas id="html" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>CSS i Less</span></div>
+											<div class="col s4">
+												<canvas id="css" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>JavaScript</span></div>
+											<div class="col s4">
+												<canvas id="javascript" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>JQuery</span></div>
+											<div class="col s4">
+												<canvas id="jquery" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>Java</span></div>
+											<div class="col s4">
+												<canvas id="java" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s6"><span>Spring MVC</span></div>
+											<div class="col s4">
+												<canvas id="spring" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix tooltipped" data-position="top" data-delay="50" data-tooltip="W trakcie nauki">info</i></div>
+											<div class="col s6"><span>SQL</span></div>
+											<div class="col s4">
+												<canvas id="sql" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix tooltipped" data-position="top" data-delay="50" data-tooltip="W trakcie nauki">info</i></div>
+											<div class="col s6"><span>NodeJS</span></div>
+											<div class="col s4">
+												<canvas id="node" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+									<div class="collapsible-body" style="padding: 5px 0 5px 10px">
+										<div class="row flex-wrapper">
+											<div class="col s2"><i class="material-icons prefix tooltipped" data-position="top" data-delay="50" data-tooltip="W trakcie nauki">info</i></div>
+											<div class="col s6"><span>MongoDB</span></div>
+											<div class="col s4">
+												<canvas id="mongo" width="70" height="70">
+												
+												</canvas>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header default-cursor">
+										<div class="col s9"><p>Znajomość języka angielskiego:</p></div>
+										<div class="col s3 right-align"><span>B2</span></div>
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header default-cursor">
+										<div class="col s9"><p>Prawo jazdy:</p></div>
+										<div class="col s3 right-align"><p>kat. B</p></div>
+									</div>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12  hidden" id="card4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Edukacja</h2></span>
+							 <ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<div class="collapsible-header">
+								
+											<div class="col s9"><i class="material-icons bounce prefix">keyboard_arrow_down</i><span>Energetyka, Wydział Inżynierii Środowiska i Energetyki, Politechnika Śląska</span></div>
+											<div class="col s3 right-align"><span>2014 - 30.01.2018</span></div>
+								
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Temat pracy inżynieskiej:<br></br>Modelowanie Matematyczne bloku parowo-wodnego z turbiną 18k370</span></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header default-cursor">
+											<div class="col s9"><span>Śląskie Techniczne Zakłady Naukowe, technik Elektronik</span></div>
+											<div class="col s3 right-align"><span>2010-2014</span></div>
+									</div>
+								</li>
+							</ul>  
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12  hidden" id="card5">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Praca Dodatkowa</h2></span>
+							<ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<div class="collapsible-header">
+										<div class="col s9"><i class="material-icons prefix bounce">keyboard_arrow_down</i>Pracownik sekcji produkcji, AIUT SP.Z O.O., Gliwice</div>
+										<div class="col s3 right-align">2016-2017</div>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Montaż podzespołów elektronicznych w urządzeniach telemetrycznych. Przeprowadzanie testów jakościowych  i funkcjonalnych wyprodukowanych urządzeń.</span></div>
+										</div>										
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header">
+										<div class="col s9"><i class="material-icons prefix bounce">keyboard_arrow_down</i>Monter szaf elektrycznych, AIUT SP.Z O.O., Gliwice </div>
+										<div class="col s3 right-align">VI-IX 2016</div>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Montaż  podzespołów szaf sterowniczych zgodnie z otrzymaną dokumentacją elektryczną.</span></div>	
+										</div>								
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header">
+										<div class="col s9"><i class="material-icons prefix bounce">keyboard_arrow_down</i>Pracownik restauracji McDonald's, Katowice</div>
+										<div class="col s3 right-align">2013-2014</div>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											 <div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Przygotowywanie kanapek obiadowych, śniadaniowych, napojów oraz deserów. Praca na kasie oraz prace porządkowe.</span></div>	
+										</div>										
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header">
+										<div class="col s9"><i class="material-icons prefix bounce">keyboard_arrow_down</i>Listonosz na poczcie w Mysłowicach </div>
+										<div class="col s3 right-align">VII 2013</div>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Dostarczanie przesyłek oraz listów w określonym terminie. Odpowiedzialność za powierzone przesyłki.</span></div>	
+										</div>								 
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col s12 hidden" id="card6">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title"><h2>Zainteresowania</h2></span>
+							<ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<div class="collapsible-header">
+										<i class="material-icons prefix bounce">keyboard_arrow_down</i><p>Sport</p>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+												<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Jestem posiadaczem 5kyu w karate Kyokushin. Poza treningami utrzymuję formę biegając</span></div>
+										</div>								
+									</div>
+								</li>
+								<li>
+									<div class="collapsible-header">
+										<i class="material-icons prefix bounce">keyboard_arrow_down</i><p>Muzyka</p>
+									</div>
+									<div class="collapsible-body">
+										<div class="row">
+											<div class="col s2"><i class="material-icons prefix">done</i></div>
+											<div class="col s10"><span>Jestem fanem cięższego brzmienia: heavy metalu,  trash metalu, power metalu, a w szczególności takich zespołów jak Iron Maiden, Dragonforce, Vader. </span></div>
+										</div>								
+									</div>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</div>
+				<!-- Portfolio Gallery -->
+				<div class="col s12 hidden" id="gallery">
+					<div class="card">
+						<div class="card-content">
+							<div class="row">
+								<div class="col s12">
+									    <ul class="resp-gallery center-align">
+									      <li class="gallery-active">
+									      	<div >
+									      		<h4>Prosta strona Internetowa</h4>
+									      		<h5>HTML, SASS, JavaScript, JQuery</h5>
+									      	</div>
+									        <a href="https://github.com/molu1994lp/webChallenge30" target="_blank"><img class="responsive-img" src="Images/portfolio1.png"/></a>
+									      </li>
+									      <li class="hidden">
+									   		<div >
+									      		<h4>Curriculum Vitae</h4>
+									      		<h5>HTML, CSS, Materialize, JavaScript, Java, Spring</h5>
+									      	</div>
+									        <a href="https://github.com/molu1994lp/portfolio/" target="_blank"><img class="responsive-img" src="Images/meshh.png"/></a>
+									      </li>
+									      <li class="hidden">
+									       	<div >
+									      		<h4>Zadanie rekrutacyjne.</h4>
+									      		<h5>Aplikacja do zarządania skanowanymi dokumentami: HTML, Bootstrap, JavaScript</h5>
+									      	</div>
+									        <a href="https://github.com/molu1994lp/DocManager" target="_blank"><img class="responsive-img" src="Images/portfolio.png"/></a> 
+									      </li>
+									      <li class="hidden">
+									      	<div >
+									      		<h4>Kilka mniejszych Projektów</h4>
+									      	</div>
+									        <a href="https://codepen.io/molu1994lp/" target="_blank"><img class="responsive-img" src="Images/portfolio4.png"/></a>
+									      </li>
+									    </ul>
+									    <div class="gallery-buttons center-align">
+									    	
+									    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<!-- Contact Form -->
+				
+
+					
+					<div class="col s12 hidden" id="form">
+						<div class="card">
+							<div class="card-content">
+								<div class="row flex-wrapper">
+									<div class="col s12 form-head">
+										<h3>Piotr Mol</h3><h3>Tel. 573 219 851</h3>
+									</div>
+								</div>
+								<hr></hr>
+								<div class="row">
+									<div class="col s12 contact">
+										<h3>Formularz kontaktowy</h3>
+									</div>
+								</div>
+								<div class="row">
+									<form class="col s12 form" th:action="@{/home}" th:object="${myEmailModel}" method="post">
+										<div class="row">
+											<div class="input-field col s6">
+												<i class="material-icons prefix">account_circle</i> <input
+													id="name" type="text" class="validate" th:field="*{name}"/> <label
+													for="name">Imie i Nazwisko</label>
+											</div>
+											<div class="input-field col s6">
+												<i class="material-icons prefix">email</i><input
+													id="email" type="text" class="validate" th:field="*{email}"/> <label
+													for="email">Email</label>
+											</div>
+										</div>
+										<div class=" row">
+											<div class="input-field col s12">
+												<textarea id="textarea1" class=" validate materialize-textarea" name="textarea1" th:field="*{content}"></textarea>
+												<label for="textarea1">Wprowadź widomość</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col s12 right-align wrapper" style="margin-bottom:5px">
+												<button class="btn btn-2 waves-effect" type="submit">Wyślij</button>
+											</div>
+										</div>
+									</form>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+				<!-- Floating button -->
+				<div class="fixed-action-btn horizontal">
+					<a class="btn-floating btn-large red">
+     					 <i class="large material-icons">mode_edit</i>
+    				</a>
+    				  <ul>
+					      <li><a class="btn-floating red center-align" onclick="Materialize.fadeInImage(toContact())"><i class="fas fa-envelope fa-lg"></i></a></li> 
+					      <li><a class="btn-floating black center-align" onclick="openGit()"><i class="fab fa-github fa-lg"></i></a></li>
+					      <li><a class="btn-floating blue darken-4 center-align" onclick="openLinkedIn()"><i class="fab fa-linkedin fa-lg"></i></a></li>
+					      <li><a class="btn-floating white center-align" onclick="openCodePen()"><i class="fab fa-codepen fa-lg" style="color: black"></i></a></li>
+					      
+				    </ul>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+
+
+
+	<script  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
+	<script th:src="@{/scripts/cardToggling.js}"></script> 
+	<script>
+	document.getElementById('left').style.height = (document.getElementById('right').clientHeight) +'px';
+	
+	new ResizeSensor(jQuery('#right'), function(){ 
+		document.getElementById('left').style.height = (document.getElementById('right').clientHeight) +'px';
+	});
+	
+	
+	</script>
+	<script th:src="@{/scripts/percentageCircle.js}"></script>
+	<script th:src="@{/scripts/gallery.js}"></script>
+</body>
+</html>

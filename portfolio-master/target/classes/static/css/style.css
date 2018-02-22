@@ -1,0 +1,188 @@
+.basic{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.colored-left{
+	background-color: #1c041e; 
+}
+
+.rigth{
+	
+	background-image: url('../Images/meshh.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh !important;
+	
+}
+.card{
+	-webkit-box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
+	box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
+}	
+#cardsArea{
+	margin: 10% 15% 0 15%;
+}
+.collapsible-header{
+	color: white; 
+	background-color: #7D2741;
+}
+.row{
+	margin-bottom: 0px !important;
+}
+.btn{
+	font-size: 0.9rem;
+	width: 200px;
+	background-color: #7D2741;
+	border: 0.5px solid white;
+	margin-bottom: 1px;
+}
+
+.btn:hover, .btn-2:hover{
+	background-color: #B0375B;
+}
+.btn:focus, .btn-2:focus{
+	background-color: #FC9BB8;
+}
+.btn-2{
+	width: 200px;
+	background-color: #BD748A;
+}
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1c041e;
+   }
+
+/* label focus color */
+.input-field input[type=text]:focus+label, .input-field textarea:focus+label
+	{
+	color: #1c041e !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field textarea:focus {
+	border-bottom: 1px solid #1c041e !important;
+	box-shadow: 0 1px 0 0 #1c041e !important;
+}
+.bounce{
+	-webkit-animation: bounce 4s infinite ease-out;
+}
+.hidden{
+	display: none;
+}
+ .wrapper{
+ 	margin-top: 5%;
+
+ }
+ .card-content{
+ 	background-color: #1C041E;
+ 	color: white;
+ }
+ form{
+ 	backround-color: #7D2741;
+ 	margin-bottom: 10px;
+ }
+ .card-action, .form{
+ 	background-color: #7D2741 !important;
+ 	color: white;
+ }
+.default-cursor{
+	cursor: default !important;
+}
+
+ .img{
+ 	-webkit-box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
+	box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
+	border-radius: 5%;
+	max-width: 80%;
+	height: auto;
+	border: 0.5px solid white;
+	margin-bottom: 1px;
+ }
+.flex-wrapper{
+	display: flex !important;
+	align-items: center;
+  	justify-content: center;
+}
+.showCanvas{
+	animation: showCanvas 1s ease;
+	animation-fill-mode: forwards;
+}
+canvas:hover{
+	transform: scale(1.1, 1.1);
+	opacity: 1;
+}
+
+.form-head{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row no-wrap;
+}
+.gallery-active{
+	animation: showPicture 1.5s ease-out;
+	animation-fill-mode: forwards;
+}
+.navi-mobile{
+	display: none;
+}
+ 
+/* ################################ */
+
+@media (max-width: 992px){
+	.img{
+		max-width: 60%;
+	}
+	.colored-left{
+		display:none;
+	}
+	.hidden{
+		display: block;
+	}
+	.rigth{
+		background-size: auto;
+		background-repeat: repeat-y; 
+	}
+	#cardsArea{
+		margin: 0 5% 0 5%;
+	}
+	.gallery-buttons{
+		display: none;
+	}
+	.navi-mobile{
+		display: flex;
+		flex-direction: column;
+		background-color: #7D2741;
+		color: white;
+	}
+	.nav-row{
+
+	}
+	.menu-list li{
+		padding: 10px 20px !important; 
+		font-size: 1.2rem;
+		border-bottom: 1px solid white;
+		text-decoration: none;
+	}
+	.menu-list li a {
+		color: white;
+	}
+	.card-action{
+		display: none !important;
+	}
+	
+}
+
+@-webkit-keyframes bounce {
+	0%,20%, 40%, 100%  { -webkit-transform: translateY(0); }
+    10%  { -webkit-transform: translateY(-15px); }
+	30% { -webkit-transform: translateY(-10px); }
+}
+
+@keyframes showCanvas{
+	0%{opacity: 0;}
+	100%{opacity: 0.8 ;}
+}
+
+@keyframes showPicture{
+	0%{opacity: 0;}
+	100%{opacity: 1 ;}
+}
