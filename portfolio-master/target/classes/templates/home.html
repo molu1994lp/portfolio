@@ -14,23 +14,26 @@
 </head>
 <body lang="pl">
 
-		<div class="row navi-mobile">
-			<div class="col s12 menu-list">
-				<ul class="navi-mobile-list clicked-menu">
-					<li onclick="menuToggle()"><i class="fas fa-bars fa-lg"></i></li>
-					<li><a href="#card1">O mnie</a></li>
-					<li><a href="#card2">Doświadczenie</a></li>
-					<li><a href="#card3">Umiejętności</a></li>
-					<li><a href="#card4">Edukacja</a></li>
-					<li><a href="#card5">Praca dodatkowa</a></li>
-					<li><a href="#card6">Zainteresowania</a></li>
-					<li><a href="#gallery">Portfolio</a></li>
-					<li><a href="#form">Kontakt</a></li>
-				</ul>
-			</div>
-		</div>
+		
 
 	<div class="row myContent">
+
+		<div class="row navi-mobile">
+				<div class="col s12 menu-list">
+					<ul class="navi-mobile-list clicked-menu">
+						<li onclick="menuToggle()"><i class="fas fa-bars fa-lg"></i></li>
+						<li><a href="#card1">O mnie</a></li>
+						<li><a href="#card2">Doświadczenie</a></li>
+						<li><a href="#card3">Umiejętności</a></li>
+						<li><a href="#card4">Edukacja</a></li>
+						<li><a href="#card5">Praca dodatkowa</a></li>
+						<li><a href="#card6">Zainteresowania</a></li>
+						<li><a href="#gallery">Portfolio</a></li>
+						<li><a href="#form">Kontakt</a></li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="col m12 l3 colored-left" id="left">
 				<div class="row center-align">
 					<div class="col s12 wrapper">
@@ -105,7 +108,7 @@
 				<div class="col  s12  hidden" id="card2">
 					<div class="card">
 						<div class="card-content">
-							<span class="card-title"><h2>Doświadczenie: </h2></span><hr></hr>
+							<span class="card-title"><h2>Doświadczenie </h2></span><hr></hr>
 							<div class="row">
 								<div class="col s9"><h5>PRAKTYKANT W O&amp;S COMPUTER SOFT</h5></div>
 								<div class="col s3 right-align"><h5>12.2017 - 01.2018</h5></div>
@@ -136,7 +139,7 @@
 				<div class="col  s12  hidden" id="card3">
 					<div class="card">
 						<div class="card-content">
-							<span class="card-title"><h2>Umiejętności: </h2></span>
+							<span class="card-title"><h2>Umiejętności </h2></span>
 							<ul class="collapsible" data-collapsible="accordion">
 								<li>
 									<div class="collapsible-header" onclick="drawCircles()">
@@ -432,42 +435,36 @@
 							<div class="card-content">
 								<div class="row flex-wrapper">
 									<div class="col s12 form-head">
-										<h3>Piotr Mol</h3><h3>Tel. 573 219 851</h3>
+										<h3>Piotr Mol</h3>
+									</div>
+									<hr></hr>
+								</div>
+								<div class="form-wrapper" style="padding: 20px">
+									<div class="row">
+										<div class="col s3">
+											<i class="fas fa-phone fa-2x"></i>
+										</div>
+										<div class="col s9 border-bottom">
+											<h5>573 219 851</h5>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s3">
+											<i class="fas fa-envelope-square fa-2x"></i>
+										</div>
+										<div class="col s9 border-bottom">
+											<h5>piotradammol@gmail.com</h5>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s3">
+											<i onclick="openLinkedIn()" class="fab fa-linkedin fa-2x linked"></i>
+										</div>
+										<div class="col s9 border-bottom">
+											<a onclick="openLinkedIn()"><h5 class="linked">LinkedIn</h5></a>
+										</div>
 									</div>
 								</div>
-								<hr></hr>
-								<div class="row">
-									<div class="col s12 contact">
-										<h3>Formularz kontaktowy</h3>
-									</div>
-								</div>
-								<div class="row">
-									<form class="col s12 form" th:action="@{/home}" th:object="${myEmailModel}" method="post">
-										<div class="row">
-											<div class="input-field col s6">
-												<i class="material-icons prefix">account_circle</i> <input
-													id="name" type="text" class="validate" th:field="*{name}"/> <label
-													for="name">Imie i Nazwisko</label>
-											</div>
-											<div class="input-field col s6">
-												<i class="material-icons prefix">email</i><input
-													id="email" type="text" class="validate" th:field="*{email}"/> <label
-													for="email">Email</label>
-											</div>
-										</div>
-										<div class=" row">
-											<div class="input-field col s12">
-												<textarea id="textarea1" class=" validate materialize-textarea" name="textarea1" th:field="*{content}"></textarea>
-												<label for="textarea1">Wprowadź widomość</label>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col s12 right-align wrapper" style="margin-bottom:5px">
-												<button class="btn btn-2 waves-effect" type="submit">Wyślij</button>
-											</div>
-										</div>
-									</form>
-								</div>	
 							</div>
 						</div>
 					</div>

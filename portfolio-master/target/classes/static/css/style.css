@@ -21,7 +21,7 @@
 #cardsArea{
 	margin: 10% 15% 0 15%;
 }
-.collapsible-header{
+.collapsible-header, .form-wrapper{
 	color: white; 
 	background-color: #7D2741;
 }
@@ -97,7 +97,7 @@
 	border: 0.5px solid white;
 	margin-bottom: 1px;
  }
-.flex-wrapper{
+/*.flex-wrapper{
 	display: -webkit-box !important;
 	display: -ms-flexbox !important;
 	display: flex !important;
@@ -107,7 +107,7 @@
   	-webkit-box-pack: center;
   	-ms-flex-pack: center;
   	justify-content: center;
-}
+}*/
 .showCanvas{
 	-webkit-animation: showCanvas 1s ease;
 	animation: showCanvas 1s ease;
@@ -140,6 +140,17 @@ canvas:hover{
 }
 .navi-mobile{
 	display: none;
+}
+.fa-2x{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.border-bottom{
+	border-bottom: 1px solid #FC9BB8;
+}
+.linked{
+	color: white;
+	cursor: pointer;
 }
  
 /* ################################ */
@@ -190,7 +201,9 @@ canvas:hover{
 	.card-action{
 		display: none !important;
 	}
-	
+	h2{
+		font-size: 3rem;
+	}
 }
 
 @-webkit-keyframes bounce {
