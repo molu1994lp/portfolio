@@ -16,7 +16,6 @@
 }
 .card{
 	-webkit-box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
 	box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
 }	
 #cardsArea{
@@ -60,6 +59,7 @@
 /* label underline focus color */
 .input-field input[type=text]:focus, .input-field textarea:focus {
 	border-bottom: 1px solid #1c041e !important;
+	-webkit-box-shadow: 0 1px 0 0 #1c041e !important;
 	box-shadow: 0 1px 0 0 #1c041e !important;
 }
 .bounce{
@@ -90,7 +90,6 @@
 
  .img{
  	-webkit-box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
 	box-shadow: 7px 4px 31px -1px rgba(0,0,0,0.75);
 	border-radius: 5%;
 	max-width: 80%;
@@ -99,26 +98,44 @@
 	margin-bottom: 1px;
  }
 .flex-wrapper{
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
 	display: flex !important;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+  	-webkit-box-pack: center;
+  	-ms-flex-pack: center;
   	justify-content: center;
 }
 .showCanvas{
+	-webkit-animation: showCanvas 1s ease;
 	animation: showCanvas 1s ease;
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
 canvas:hover{
+	-webkit-transform: scale(1.1, 1.1);
 	transform: scale(1.1, 1.1);
 	opacity: 1;
 }
 
 .form-head{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row no-wrap;
 	flex-flow: row no-wrap;
 }
 .gallery-active{
+	-webkit-animation: showPicture 1.5s ease-out;
 	animation: showPicture 1.5s ease-out;
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
 .navi-mobile{
@@ -148,7 +165,12 @@ canvas:hover{
 		display: none;
 	}
 	.navi-mobile{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		background-color: #7D2741;
 		color: white;
@@ -177,9 +199,19 @@ canvas:hover{
 	30% { -webkit-transform: translateY(-10px); }
 }
 
+@-webkit-keyframes showCanvas{
+	0%{opacity: 0;}
+	100%{opacity: 0.8 ;}
+}
+
 @keyframes showCanvas{
 	0%{opacity: 0;}
 	100%{opacity: 0.8 ;}
+}
+
+@-webkit-keyframes showPicture{
+	0%{opacity: 0;}
+	100%{opacity: 1 ;}
 }
 
 @keyframes showPicture{
