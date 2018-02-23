@@ -1,18 +1,20 @@
+
 .basic{
 	margin: 0px !important;
 	padding: 0px !important;
+	
 }
 .colored-left{
-	background-color: #1c041e; 
+	background-color: #1c041e;
+	
 }
 
 .rigth{
-	
 	background-image: url('../Images/meshh.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh !important;
-	
+	width: 100%;
 }
 .card{
 	-webkit-box-shadow: 10px 4px 30px 5px rgba(0,0,0,0.75);
@@ -25,8 +27,12 @@
 	color: white; 
 	background-color: #7D2741;
 }
+.form-wrapper{
+	padding: 20px;
+}
 .row{
 	margin-bottom: 0px !important;
+	
 }
 .btn{
 	font-size: 0.9rem;
@@ -97,17 +103,6 @@
 	border: 0.5px solid white;
 	margin-bottom: 1px;
  }
-/*.flex-wrapper{
-	display: -webkit-box !important;
-	display: -ms-flexbox !important;
-	display: flex !important;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-  	-webkit-box-pack: center;
-  	-ms-flex-pack: center;
-  	justify-content: center;
-}*/
 .showCanvas{
 	-webkit-animation: showCanvas 1s ease;
 	animation: showCanvas 1s ease;
@@ -140,6 +135,7 @@ canvas:hover{
 }
 .navi-mobile{
 	display: none;
+	
 }
 .fa-2x{
 	margin-top: 10px;
@@ -200,6 +196,35 @@ canvas:hover{
 	}
 	h2{
 		font-size: 3rem;
+	}
+	h3{
+		font-size: 2.5rem;
+	}
+	h4{
+		font-size: 2rem;	
+	}
+	h5{
+		font-size: 1.5 rem;
+	}
+}
+@media (max-width: 560px){
+	h2{
+		font-size: 2rem;
+	}
+	h3{
+		font-size: 1.8rem;
+	}
+	h4{
+		font-size: 1.5rem;
+	}
+	h5{
+		font-size: 1rem;
+	}
+	.icon-column{
+		display: none;
+	}
+	.form-wrapper{
+		padding: 0;	
 	}
 }
 
